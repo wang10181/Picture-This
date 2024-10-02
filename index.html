@@ -15,7 +15,28 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+    <!-- Use the picture element to provide multiple image sources -->
+     <picture>
+    <!-- If the viewport is smaller than 960px, use a landscape image -->
+      <source media="(max-width: 959px)" 
+      srcset="images/image-320px-1x.jpg 320w,
+              images/image-480px-2x.jpg 640w,
+              images/image-960px-3x.jpg 960w" 
+      sizes="(max-width: 959px) 100vw, 960px">
+
+    <!-- If the viewport is 960px or larger, use a square image -->
+      <source media="(min-width: 960px)" 
+      srcset="images/square-image-960px-1x.jpg 960w, 
+              images/square-image-960px-2x.jpg 1920w, 
+              images/square-image-2880px-3x.jpg 2880w" 
+      sizes="(min-width: 960px) 50vw, 480px">
+
+
+      <!-- Fallback image for browsers that don't support the picture element -->
+      <img src="images/museum.jpg" 
+           alt="A view of the museum with several paintings on the walls" 
+           style="width: 100%; height: auto; display: block;">
+     </picture>
 
   </header>
 </body>
