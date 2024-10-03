@@ -16,27 +16,56 @@
       <h4>My Really Cool Blog Post</h4>
     </div>
     <!-- Use the picture element to provide multiple image sources -->
-     <picture>
-    <!-- If the viewport is smaller than 960px, use a landscape image -->
-      <source media="(max-width: 959px)" 
-      srcset="images/image-320px-1x.jpg 320w,
-              images/image-480px-2x.jpg 640w,
-              images/image-960px-3x.jpg 960w" 
-      sizes="(max-width: 959px) 100vw, 960px">
-
-    <!-- If the viewport is 960px or larger, use a square image -->
+    <picture>
+      <!-- If the viewport is 960px or larger, use a square image -->
       <source media="(min-width: 960px)" 
-      srcset="images/square-image-960px-1x.jpg 960w, 
-              images/square-image-960px-2x.jpg 1920w, 
-              images/square-image-2880px-3x.jpg 2880w" 
-      sizes="(min-width: 960px) 50vw, 480px">
+              srcset="images/sq-480-1x.jpg 480w,
+                      images/sq-960-2x.jpg 960w,
+                      images/sq-1440-3x.jpg 1440w"
+              sizes="(min-width: 960px) 50vw, 480px">
 
+      <source media="(min-width: 1280px)" 
+              srcset="images/sq-640-1x.jpg 640w,
+                      images/sq-1280-2x.jpg 1280w,
+                      images/sq-1920-3x.jpg 1920w"
+              sizes="(min-width: 1280px) 50vw, 640px">
+
+      <source media="(min-width: 1600px)" 
+              srcset="images/sq-800-1x.jpg 800w,
+                      images/sq-1600-2x.jpg 1600w,
+                      images/sq-2400-3x.jpg 2400w"
+              sizes="(min-width: 1600px) 50vw, 800px">
+
+      <!-- If the viewport is smaller than 960px, use a landscape image -->
+      <source media="(max-width: 959px)" 
+              srcset="images/view-320.jpg 320w,
+                      images/view-640-2x.jpg 640w,
+                      images/view-960-3x.jpg 960w"
+              sizes="(max-width: 959px) 100vw, 320px">
+
+      <source media="(max-width: 480px)" 
+              srcset="images/view-480.jpg 480w,
+                      images/view-960-2x.jpg 960w,
+                      images/view-1440-3x.jpg 1440w"
+              sizes="(max-width: 480px) 100vw, 480px">
+
+      <source media="(max-width: 720px)" 
+              srcset="images/view-720.jpg 720w,
+                      images/view-1440-2x.jpg 1440w,
+                      images/view-2160-3x.jpg 2160w"
+              sizes="(max-width: 720px) 100vw, 720px">
+
+      <source media="(max-width: 960px)" 
+              srcset="images/view-960.jpg 960w,
+                      images/view-1920-2x.jpg 1920w,
+                      images/view-2880-3x.jpg 2880w"
+              sizes="(max-width: 960px) 100vw, 960px">
 
       <!-- Fallback image for browsers that don't support the picture element -->
       <img src="images/museum.jpg" 
            alt="A view of the museum with several paintings on the walls" 
            style="width: 100%; height: auto; display: block;">
-     </picture>
+    </picture>
 
   </header>
 </body>
